@@ -1,0 +1,161 @@
+== Fondements
+
+ifndef::slides[]
+
+Pour mener à bien le développement d'un système informatique industriel
+ou commercial, on ne peut pas improviser. Il s'agit d'un travail impliquant
+un grand nombre de personnes, des enjeux financiers souvent énormes.
+Le but de ce cours est de vous faire prendre conscience de cet état de fait
+autant que de vous donner les différentes techniques liées à cette activité.
+Au nom de quoi pouvez-vous avoir confiance dans les conseils présentés dans ce cours?
+Il ne faut pas justement! Il vous faut sans arrêt questionner, remettre en cause
+les idées reçues.
+//Néanmoins, les éléments de ce cours ne sortent pas de l'imagination fertile de son auteur. Je m'inspire principalement de ceux qui ont l'expérience en la matière. C'est pourquoi vous trouverez un grand nombre de références et d'informations pour aller plus loin (généralement des URLs).
+
+L'objectif de ce cours est d'aborder la problématique du développement
+raisonné (de qualité, sûr, rapide, pas cher, etc.) de systèmes.
+La méthode choisie est celle des études de cas et des applications concrètes.
+
+endif::slides[]
+
+Les concepts abordés peuvent se classer en différents niveaux  <<gram86>> :
+
+stratégies::
+	règles de comportement général guidant les choix du développeur (par exemple,
+	obtenir le plus rapidement possible un énoncé exécutable relève de la stratégie "prototyper").
+tactiques::
+	décrivent des étapes logiques de développement conduisant à un énoncé possédant
+	certaines propriétés (par exemple, passer d'un énoncé imprécis à un énoncé totalement défini
+	relève de la tactique "spécifier").
+paradigmes::
+	sont des étapes élémentaires de la construction d'un programme (par exemple,
+	expliciter une entité par un nom et une définition informelle revient à appliquer le paradigme "désigner").
+
+ifdef::slides[:leveloffset: -1]
+
+=== Stratégies
+
+On vous parlera ici de méthodes, de cycle de vie, de gestion de projet. Mais nous aborderons cela bien plus tard
+car dans un premier temps cela va être à la fois rébarbatif et très loin de vos préoccupations.
+
+Pour l'instant retenons des principes simples :
+
+- Comprendre
+- S'organiser
+- Modéliser
+- S'adapter
+
+ifdef::slides[:leveloffset: -1]
+
+==== Comprendre
+
+[quote, Auguste Detoeuf, découvert dans Le Lexique d'Habrias]
+____________________________________________________________________
+Théoricien : individu qui n'est pas de votre avis.
+____________________________________________________________________
+
+Le problème, l'environnement, les outils à maîtriser, la solution attendue, le domaine métier, etc.
+
+==== S'organiser
+
+[quote, N. Boileau]
+____________________________________________________________________
+Vingt fois sur le métier remettez votre ouvrage :
+Polissez-le sans cesse et le repolissez ;
+Ajoutez quelquefois, et souvent effacez.
+____________________________________________________________________
+
+Dans les méthodes agiles on parle de "sprint 0". Il est important de bien s'organiser avant de foncer tête baissée
+dans le travail à proprement parlé.
+
+ifdef::slides[==== S'organiser (suite)]
+
+Voici quelques éléments importants à aborder :
+
+Démarche globale::
+	Quelle démarche allez-vous mettre en oeuvre (Merise, RUP, Agile, personnelle, ...)?
+Rôles::
+	Qui va faire quoi?
+Environnement::
+	Quels outils allez-vous utiliser (modélisation, analyse, développement, test, documentation)?
+Versionnage::
+	Il est très important, surtout dans un travail collaboratif, de bien utiliser un outil de gestion de version. Que ce soit pour le code (facile), la documentation (moins évident) ou les modèles (très difficile). Pour le code, le nombre de systèmes disponibles vous empêche d'avoir une excuse ({git},{svn},{mercurial}).
+
+
+==== Modéliser
+
+[quote, N. Boileau]
+____________________________________________________________________
+Ce que l'on conçoit bien s'énonce clairement.
+Et les mots pour le dire arrivent aisément.
+____________________________________________________________________
+
+Pour s'abstraire.
+
+==== S'adapter
+
+Se mettre à jour des techniques. Adapter sa façon de procéder au contexte (au poste que l'on occupe
+par exemple). Voir <<feedback>>.
+
+ifdef::slides[:leveloffset: +1]
+
+=== Tactiques
+
+Liste de tactiques :
+
+-  spécifier
+-  décomposition (d'un problème en sous-problème)
+-  itération
+-  induction (construire un énoncé récursif)
+-  approximation (organiser la résolution d'un problème en étudiant d'abord un nouveau problème, considéré comme plus simple)
+-  généralisation (formuler et résoudre le problème à un niveau d'abstraction plus général pour permettre ensuite
+	un plus grand nombre d'identifications)
+-  réutilisation (exploiter au mieux tout travail déjà fait, cf. aussi <<DRY>>)
+
+=== Paradigmes
+
+Liste de paradigmes :
+
+-  désigner
+-  typer (décrire les proriétés pertinentes d'une entité)
+-  affaiblir (transformer un énoncé pour en réduire la complexité)
+-  renforcer (compléter un énoncé par des contraintes supplémentaires)
+-  décomposer par cas (lorsqu'on distingue plusieurs traitements suivant
+	les données du problème à un endroit donné)
+-  sérialiser (pour définir un résultat, utiliser un résultat intermédiaire +x+ à
+	partir des données, puis exprimer le résultat à partir de +x+)
+-  répartir (définir séparément un certain nombre de sous-résultats, qu'il s'agit ensuite de
+	composer entre eux pour obtenir le résultat attendu)
+-  identifier (identifier deux problèmes consiste à reconnaître leur identité au-delà
+	des différences de forme de leurs énoncés)
+-  paramétrer (faire abstraction des valeurs particulières de certaines entités,
+	parce qu'elles ne sont pas pertinentes pour l'élaboration de la solution visée)
+-  représenter (choisir, pour certaines entités, les types, les relations et le moyen d'expression adéquats)
+
+Les tactiques sont des compositions de paradigmes.
+Ainsi, la mise en oeuvre de la tactique d'approximation consiste à appliquer le paradigme
+*affaiblir*, et le cas échéant le paradigme *renforcer* pour revenir au problème posé.
+
+=== Le Manifeste Agile
+
+Le *Manifeste Agile* (_Agile Manifesto_ <<HighsmithFowler2001>>)
+	est un ensemble de principes (voir aussi <<1030005>> pour une analyse plus récente).
+
+[[Satisfaction]]
+.Satisfaction
+[caption="Principe : "]
+==========================
+Notre plus haute priorité est de satisfaire le client
+en lui livrant rapidement, et ce, de façon continue
+un logiciel de qualité.
+==========================
+
+[[feedback]]
+.Améliorations
+[caption="Principe : "]
+==========================
+À intervalles réguliers, l'équipe réfléchit sur une façon
+de devenir plus efficace, puis adapte et ajuste son comportement en conséquence.
+==========================
+
+ifdef::slides[:leveloffset: +1]

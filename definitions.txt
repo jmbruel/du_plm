@@ -2,7 +2,7 @@
 :standHeight: 250
 :standScreen: 500
 :standWidth: 250
-	
+
 // raccourcis sites
 :aadl: http://www.aadl.info/[AADL]indexterm:[AADL]
 :artisan: http://www.artisansw.com/[Artisan]
@@ -21,6 +21,7 @@
 :eclipse: http://www.eclipse.org[eclipse]indexterm:[eclipse]
 :eclipseDocStyleGuide: https://wiki.eclipse.org/Eclipse_Doc_Style_Guide[Eclipse Doc Style Guide]
 :gemoc: http://gemoc.org/[GEMOC]
+:git: link:http://git-scm.com/[Git]
 :github: link:https://github.com/[GitHub]
 :gherkin: link:http://cukes.info/gherkin.html[Gherkin]
 :grafcet: http://fr.wikipedia.org/wiki/Grafcet[Grafcet]
@@ -29,6 +30,7 @@
 :magicDraw: http://www.nomagic.com/[MagicDraw]
 :marte: http://www.omgmarte.org/[MARTE]indexterm:[MARTE]
 :mediawiki: https://www.mediawiki.org[MediaWiki]
+:mercurial: link:http://mercurial.selenic.com/[Mercurial]
 :modelica: https://www.modelica.org/[Modelica(R)]
 :modelio: http://www.modeliosoft.com/[Modelio]
 :models: http://www.modelsconference.org/[MODELS]
@@ -40,6 +42,7 @@
 :pandoc: http://johnmacfarlane.net/pandoc/[Pandoc]
 :papyrus: http://www.eclipse.org/papyrus/[Papyrus]
 :plantumlweb: http://plantuml.sourceforge.net/[plantUML]
+:plantuml: http://plantuml.sourceforge.net/[plantUML]
 :polarsys: http://polarsys.org/[Polarsys]
 :rapportPotier: http://www.industrie.gouv.fr/logiciel-embarque/Rapport-BGLE-final.pdf[Rapport Potier]
 :rcp: http://wiki.eclipse.org/index.php/Rich_Client_Platform[RCP]
@@ -53,6 +56,7 @@
 :semco: http://www.semcomdt.org/[SEMCO]
 :slidy2: http://www.w3.org/Talks/Tools/Slidy2/[W3C HTML Slidy]
 :sosym: http://www.sosym.org/[SoSyM]
+:svn: link:https://subversion.apache.org/[Subversion]
 :sym: http://www.omg.org/spec/SyM/[SysML-Modelica]
 :sysml: http://www.omgsysml.org/[SysML(TM)]indexterm:[SysML]
 :sysmltrends: http://www.google.fr/trends/explore#q=sysml[SysML Trends]
@@ -110,7 +114,7 @@
 :lups: http://www.univ-tlse3.fr[l'UPS]
 :upsti: http://www.upsti.fr/[UPSTI]
 :lupsti: http://www.upsti.fr/[l'UPSTI]
-	
+
 // SysML diagrams
 :act: act(((act)))
 :bdd: bdd(((bdd)))
@@ -140,9 +144,8 @@
 :revisions: Questions de révision
 :is: Ingénierie Système(((IS)))
 :lis: l'Ingénierie Système(((IS)))
-ifndef::uk[] 
-:stakeholders: parties prenantes 
+ifndef::uk[]
+:stakeholders: parties prenantes
 endif::uk[]
 :satisfy: +<<satisfy>>+
 :verify: +<<verify>>+
-
