@@ -106,7 +106,46 @@ ifdef::slides[:leveloffset: +1]
 * notes
 * contraintes
 
+=== Enchaînement des modèles
+
+NOTE: Nous utilisons dans ce cours la démarche mise en avant dans <<Roques2007a>>.
+
+ifndef::slides[.L'objectif de la modélisation : combler le gap entre exigences et code]
+image::pr1.png[]
+
+ifdef::slides[=== Enchaînement des modèles (suite)]
+
+ifndef::slides[.Analyse des besoins utilisateurs]
+image::pr2.png[]
+
+ifdef::slides[=== Enchaînement des modèles (suite)]
+
+ifndef::slides[.Analyse des besoins utilisateurs]
+image::pr3.png[]
+
+ifdef::slides[=== Enchaînement des modèles (suite)]
+
+ifndef::slides[.Analyse des besoins utilisateurs]
+image::pr4.png[]
+
+ifdef::slides[=== Enchaînement des modèles (suite)]
+
+ifndef::slides[.Analyse des besoins utilisateurs]
+image::pr5.png[]
+
+ifdef::slides[=== Enchaînement des modèles (suite)]
+
+ifndef::slides[.Analyse des besoins utilisateurs]
+image::pr6.png[]
+
+ifdef::slides[=== Enchaînement des modèles (suite)]
+
+ifndef::slides[.Analyse des besoins utilisateurs]
+image::pr7.png[]
+
 ifdef::slides[]
+
+=== Passons à la pratique!
 
 [icon="{iconsdir}/tuxteacher.png"]
 [NOTE]
