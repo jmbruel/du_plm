@@ -139,7 +139,7 @@ ifdef::slides[=====  Association (suite)]
 
 Exemple d’association binaire 
 
-Soient les classes `Fournisseurs` et `Produits`.
+Soient les classes `Fournisseurs` et `s`.
 On veut indiquer quels sont les produits susceptibles d’être fournis par chaque fournisseur et quels sont les fournisseurs susceptibles de fournir chaque produit.
 
 image::prod-fourn.png[width="40%"]
@@ -219,17 +219,17 @@ Par exemple le schéma précédent a été réalisé à partir du code suivant :
 
 -----
 @startuml
-class Produits {
+class Produit {
 	idPro
 	designation
 	poids
 }
-class Fournisseurs {
+class Fournisseur {
 	idFour
 	raisonSociale
 	adresse
 }
-Produits "0..*" -- "0..*" Fournisseurs : Fournir
+Produit "0..*" -- "0..*" Fournisseur : Fournir
 @enduml
 -----
 
