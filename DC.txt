@@ -40,7 +40,7 @@ différents diagrammes.
 Exemple de convention d’écriture suivante :
 
 - 1ère lettre d'une classe toujours en majuscule (la classe `Comptes` par exemple)
-- mise au pluriel des noms
+- mise au singulier des noms
 ====
 
 image::pluriels.png[]
@@ -48,7 +48,7 @@ image::pluriels.png[]
 ===== Classes et objets
 
 En programmation on parle de `type` et de `variable`. Même si c'est un raccourci très rapide
-nous pouvons pour l'instant faire le parallèle entre les notions de `classe` et d'`objet`.
+nous pouvons pour l'instant faire le parallèle entre les notions de `classe` et d' `objet`.
 
 On parlera toutefois d'*instance* pour désigner un objet issu d'une classe.
 
