@@ -9,7 +9,7 @@ IMAGESDIR=images
 #HIGHLIGHT=highlightjs
 #HIGHLIGHT=prettify
 HIGHLIGHT=pygments
-DOCTOR=asciidoctor -a data-uri -a icons=font -a images=$(IMAGESDIR) -a source-highlighter=$(HIGHLIGHT)
+DOCTOR=asciidoctor -a data-uri -a icons=font -a imagesdir=$(IMAGESDIR) -a source-highlighter=$(HIGHLIGHT)
 BACKENDS=/Users/bruel/localdev/asciidoctor-backends
 DECKJS=$(BACKENDS)/haml/deckjs/
 #DECKJS=$(BACKENDS)/haml/
@@ -20,7 +20,7 @@ DECK=swiss
 EXT=asc
 PANDOC=pandoc
 OUTPUT=.
-DEP=definitions.txt glossaire.txt refs.txt
+DEP=definitions.txt
 SOURCEFILES = ./src/java/CodingDojo/src/*.java
 DOC = doc
 #-----------------------------------------------------
